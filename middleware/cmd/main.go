@@ -11,7 +11,7 @@ func hello(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	logger := middleware.CreateLogger("section4")
+	logger := middleware.CreateLogger("anaLog")
 	http.Handle("/", middleware.Time(logger, hello))
 	http.ListenAndServe(":3000", nil)
 }
